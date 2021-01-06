@@ -61,6 +61,10 @@ main #controls {
   box-shadow: 5px 5px 5px gray;
 }
 
+#controls #new {
+  background-color: rgb(29, 231, 100);
+}
+
 #grid {
   display: grid;
   grid-gap: 0;
