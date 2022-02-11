@@ -41,8 +41,8 @@ function newGrid() {
   if (size >= 2 && size <= 100) generateGrid(size);
 }
 
-function changeColor(e) {
-  color = e.target.value;
+function changeColor(event) {
+  color = event.target.value;
 }
 
 const newBtn = document.querySelector('#new');
@@ -52,10 +52,16 @@ const clearBtn = document.querySelector('#clear');
 clearBtn.addEventListener('click', clearGrid);
 
 const colorBtn = document.querySelector('#color');
-colorBtn.addEventListener('change', changeColor);
-colorBtn.addEventListener('click', changeColor);
+colorBtn.addEventListener('change', event => {
+  changeColor(event);
+  colorBtn.style.backgroundColor = color;
+});
+colorBtn.addEventListener('click', event => {
+  changeColor(event);
+  colorBtn.style.backgroundColor = color;
+});
 
-const eraseBtn = document.querySelector('#erase');
+const eraseBtn = document.querySelector('#eraser');
 eraseBtn.addEventListener('click', () => color = '#FFF');
 
 const grid = document.querySelector('#grid');
