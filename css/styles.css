@@ -7,86 +7,111 @@
   box-sizing: border-box;
 }
 
+html, body  {
+  height: 100%;
+}
+
 body {
   font-family: sans-serif;
-  background-color: #1A1A1A;
+  background-color: #2a2a2a;
   display: flex;
-  margin: 5vh 15vw;
+  justify-content: center;
+  align-items: center;
   font-family: 'Roboto', sans-serif;
+  position: relative;
 }
 
 main {
   display: flex;
 }
 
-#controls {
+#aside {
   width: 20vw;
-  background-color: #121212;
+  background-color: #171717;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding: 20px;
-  border-radius: 10px;
-  margin-right: 10vw;
-  box-shadow: 5px 5px 5px #111;
+  box-shadow: 5px 5px 10px #111;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
 }
 
-#controls header {
+#aside header {
   padding-bottom: 5px;
   text-align: center;
   color: #eee;
-  text-decoration: underline;
   width: 100%;
   margin-bottom: 20px;
-}
-
-#controls button,
-#controls input {
-  font-family: 'Roboto', sans-serif;
-  padding: 10px;
   font-size: 20px;
-  cursor: pointer;
-  background-color: #000;
-  color: #FFF;
+}
+
+#aside header > p {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+#aside > p {
+  font-size: 18px;
+  color: #eee;
+  border-top: 1px solid #eee;
+  width: 100%;
+  text-align: center;
+  padding: 25px 0 15px 0;
+}
+
+#aside #controls {
+  display: flex;
+  gap: 10px;
+}
+
+#aside button,
+#aside input {
   border: none;
-  border-radius: 10px;
-  margin: 10px 0;
-  transition: all .2s;
-  width: 10vw;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: #285783;
+  border-radius: 50%;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  transition: all .375s;
 }
 
-#controls input {
-  padding: 5px 30px;
-  height: 45px;
-}
-
-#controls button:hover,
-#controls input:hover {
-  transform: scale(1.1);
-}
-
-#controls #new {
-  background-color: #45bc32;
-}
-
-#controls #eraser,
-#controls #clear {
-  background-color: #f72020;
+#aside button:hover,
+#aside input:hover {
+  scale: 1.05;
+  box-shadow: 5px 5px 10px #111;
 }
 
 #grid {
   display: grid;
   grid-gap: 0;
+  margin-left: 10vw;
   width: 560px;
   height: 560px;
-  border: 10px solid #121212;
-  box-shadow: 5px 5px 5px #111;
-  border-radius: 5px;
+  border: 10px solid #285783;
+  box-shadow: 5px 5px 10px #111;
 }
 
 #grid div {
-  border: 1px solid #f7f7f7;
+  border: 1px solid #f1f1f1;
   background-color: #fff;
   cursor: crosshair;
+}
+
+#new {
+  color: #f1f1f1;
+}
+
+#eraser {
+  color: #ff2222;
+}
+
+#clear {
+  background-color: #ff2222 !important;
+  color: #f1f1f1;
 }

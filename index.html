@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="./css/styles.css">
-  <title>Etch-A-Sketch</title>
-</head>
-<body>
-  <aside id="controls">
-    <header>
-      <h1>Etch-A-Sketch</h1>
-    </header>
-    <button id="new">New grid</button>
-    <input id="color" type="color" name="color" id="color">
-    <button id="eraser">Eraser</button>
-    <button id="clear">Clear</button>
-  </aside>
-  <main>
-    <div id="grid"></div>
-  </main>
-  <script src="./js/main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="./js/main.js" defer></script>
+    <title>Etch-A-Sketch</title>
+  </head>
+  <body>
+    <aside id="aside">
+      <header>
+        <h1>Etch-A-Sketch</h1>
+        <p>Draw some pixel art and have fun!</p>
+      </header>
+      <p>Controls</p>
+      <div id="controls">
+        <button id="new" title="New grid"><i class="bx bxs-grid"></i></button>
+        <input id="color" type="color" name="color" id="color" title="Color Picker" />
+        <button id="eraser" title="Eraser"><i class="bx bxs-eraser"></i></button>
+        <button id="clear" title="Clear"><i class='bx bx-trash-alt'></i></i></button>
+      </div>
+    </aside>
+    <main>
+      <div id="grid"></div>
+    </main>
+  </body>
 </html>
